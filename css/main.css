@@ -1,0 +1,107 @@
+.idx-wrap{
+    margin: 0 auto;
+    width: 100%;
+    max-width: 504px;
+    height: 100%;
+}
+.idx-inner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 80%;
+    padding-top: 30%;
+}
+.idx-logo{
+    padding-bottom: 30px;
+}
+.idx-wrap{
+    text-align: center;
+}
+.idx-wrap > i{
+    width: 18px;
+    margin: 0 auto;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.idx-wrap > p{
+    padding-top: 15px;
+    text-align: center;
+    letter-spacing: -0.96px;
+    line-height: 1.5;
+}
+.form{
+    margin-top: 60px;
+}
+.form > form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.form > form > label{
+    align-self: flex-start;
+    padding: 0 0 6px 50px;
+    color: #686e7c;
+}
+.form > form > input{
+    width: 80%;
+    height: 52px;
+    padding: 16px;
+    font-family: var(--fn-sans);
+    border: solid 1px #dddfe1;
+}
+.form > form > input::placeholder{
+    color: #dddfe1;
+}
+.pass{
+    margin-top: 15px;
+}
+.login-wrap{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 52px auto 0
+}
+.login{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 243px;
+    height: 48px;
+    letter-spacing: 0.36px;
+    font-size: 18px;
+    font-family: var(--fn-sans);
+    border-radius: 24px;
+    cursor: pointer;
+    overflow: hidden;
+    display: inline-block; vertical-align: top;
+    transition: all 0.3s;
+    background-color: var(--btn-color-blue);
+    color: #fff;
+}
+
+.login:hover{
+    color: #000;
+    border: solid 1px #e5e5e5;
+
+}
+.login:before{
+    content: "";
+    z-index: -1;
+    position: absolute;
+    background:#fff; 
+    transition: all 0.5s;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    width: 0;
+    height: 100%;
+}
+.login:hover:before{
+    width: 100%;
+}
+.info{
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 50%;
+    color: var(--color-gray);
+}
