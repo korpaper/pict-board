@@ -11,7 +11,680 @@
     width: 100%;
     background-color: #f4f7fc;
 }
+
+/* 게시글 */
 .cont-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
     height: 66px;
+    padding: 0 40px 0 27px;
+    /* padding-right: 8px; */
+    letter-spacing: -1.08px;
+    font-size: 18px;
+    font-weight: 500;
+    background-color: #fff;
+    border-bottom: 1px solid #e5e5e5;
+}
+.bc{
+    display: flex;
+    font-size: 18px;
+}
+.nav01{
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    color: #b5b5b5;
+}
+.nav01::after{
+    display: inline-block;
+    content: "";
+    width: 4px;
+    height: 4px;
+    margin: 0 12px;
+    border-radius: 50%;
+    background-color: #b5b5b5;
+}
+.nav02{
+    font-weight: bold;
+}
+.board{
+    padding: 0 32px 0 27px;
+}
+
+
+.cont-top > a{
+    padding: 5px 25px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    color: #999;
+}
+.bd-top{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 13px 0;
+}
+.sc-title{
+    border: 0;
+    width: 473px;
+    height: 39px;
+    padding: 0 20px;
+    border-radius: 19.5px;
+    font-family: var(--fn-sans);
+}
+.sc-title:focus{
+    outline: none;
+}
+.sc-btn{
+    position: absolute;
+    left: 430px;
+    bottom: 23px;
+}
+/* radio */
+.status-look {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.radio-button {
+    cursor: pointer;
+    position: relative;
+    padding-left: 30px;
+}
+.radio-button input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    height: 0;
+    width: 0;
+}
+.status-look .radio-button .custom-radio {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 1px solid #b5b5b5;
+}
+.status-look .custom-radio:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #fff;
+}
+.status-look .radio-button input[type="radio"]:checked ~ .custom-radio:after {
+    background-color: #363636;
+}
+.status-look .radio-button:nth-of-type(-n + 4){
+    margin-right: 35px;
+}
+/* 글목록 */
+.bd-bottom{
+    width: 100%;
+    margin-bottom: 20.5px;
+    background-color: #fff;
+}
+.bd-head{
+    display: grid;
+    grid-template-columns: 10% 60% 10% 10% 10%;
+    width: 100%;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    color: #515151;
+}
+.bd-head > li:first-child{
+    text-align: center;
+}
+.bd-head > li:nth-child(2){
+    padding-left: 40px;
+}
+/* 글 컨텐츠 */
+.board{
+    /* height: 100%; */
+}
+.bd-body{
+    /* overflow: scroll; */
+    /* height: 70vh; */
+    /* height: 100%; */
+}
+.bd-scroll{
+    height: 70vh;
+    min-height: 500px;
+    overflow-y: scroll;
+}
+.bd-desc{
+    display: grid;
+    grid-template-columns: 10% 60% 10% 10% 10%;
+    width: 100%;
+    margin: 10px 0;
+}
+.bd-desc > li{
+    padding: 10px 0;
+    cursor: pointer;
+    letter-spacing: -0.96px;
+    color: #191919;
+    font-size: 16px;
+}
+.bd-desc > li:first-child{
+    text-align: center;
+}
+.bd-desc > li:nth-child(2){
+    /* padding-left: 40px; */
+}
+.bd-desc > li:nth-child(n + 3){
+    padding-left: 13px;
+}
+.bd-desc > li.complete{
+    color: #00b488;
+}
+.bd-desc > li.doing{
+    color: #006fff;
+}
+.bd-desc > li.yet{
+    color: #b5b5b5;
+}
+.bd-desc > li.impo{
+    color: #b20000;
+}
+
+/* 관리자 뷰 */
+.board.view{
+    /* height: 82vh;
+    overflow-y: scroll; */
+}
+.cont-btn > a{
+    padding: 5px 25px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    color: #999;
+}
+.cont-btn > a:nth-child(-n + 2){
+    margin-right: 18px;
+}
+.cont-top-btn{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.cont-top-btn > a{
+    padding: 7px 32px;
+    background-color: #fff;
+    letter-spacing: -0.96px;
+    color: #999;
+    border: solid 1px #e5e5e5;
+}
+.mng-view{
+    background-color: #fff;
+}
+.mv-head{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.mv-top{
+    display: flex;
+}
+.mv-top > select{
+    position: relative;
+    width: 85px;
+    border: none;
+    font-family: var(--fn-sans);
+    font-size: 16px;
+    letter-spacing: -0.96px;
+    -webkit-appearance:none;
+    appearance:none;
+    background:url('/img/dropdown.webp') no-repeat right 0px center;
+}
+.mv-head{
+    padding: 40px 97px 29px 45px;
+}
+.bd-tit{
+    padding-left: 20px;
+    font-size: 26px;
+    font-weight: 500;
+    color: #191919;
+    letter-spacing: -1.56px;
+}
+.mv-bottom{
+    display: flex;
+    justify-content: space-between;
+    width: 20%;
+    padding-top: 20px;
+}
+.mv-bottom > li{
+    letter-spacing: -0.96px;
+}
+.mv-desc{
+    padding: 29px 37px 43.5px 45px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    color: #363636;
+    letter-spacing: -0.96px;
+}
+.mv-desc > p:nth-child(-n + 2){
+    padding-bottom: 40px;
+}
+.down-file{
+    padding: 30px 0 40px 0;
+}
+.down-file > ul{
+    display: flex;
+}
+.down-file > ul > li{
+    margin-right: 80px;
+}
+.down-file > ul > li > a{
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+}
+.down-file > ul > li > a > img{
+    padding-right: 10px;
+}
+.mv-desc > p{
+    line-height: 1.5;
+}
+.reply{
+    padding: 0 45.5px 47.5px 45.5px;
+}
+.reply-cont{
+    padding: 19.5px 0;
+    color: #363636;
+    letter-spacing: -1.08px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.reply-cont > li:first-child{
+    display: flex;
+    padding-bottom: 20px;
+    font-size: 18px;
+}
+.reply-cont > li:nth-child(2){
+    letter-spacing: -0.96px;
+    line-height: 1.3;
+}
+.reply-cont > li:nth-child(3){
+    padding: 5px 0 12px 0;
+    letter-spacing: -0.72px;
+    font-size: 12px;
+    color: #bfbfbf;
+}
+.reply-cont > li:nth-child(4) button{
+    width: 60px;
+    height: 30px;
+    letter-spacing: -0.72px;
+    font-size: 12px;
+    border: solid 1px rgba(0, 0, 0, 0.1);
+    color: #999;
+    font-family: var(--fn-sans);
+}
+.reply-cont > li:nth-child(4) button:nth-child(1){
+    margin-right: 8px;
+}
+.dot{
+    display: flex;
+    align-items: center;
+}
+.dot::after{
+    display: inline-block;
+    content: "";
+    width: 4px;
+    height: 4px;
+    margin: 0 10px;
+    border-radius: 50%;
+    background-color: #b5b5b5;
+}
+.editor{
+    padding: 14.5px 266px 130px 48px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+.editor-tit{
+    padding-bottom: 15px;
+    letter-spacing: -0.96px;
+    font-weight: bold;
+    color: #333;
+}
+.smart-edit{
+    width: 100%;
+    height: 248px;
+    background-color: #fff;
+}
+.app-reply{
+    float: right;
+    width: 120px;
+    height: 39px;
+    margin-top: 20px;
+    color: #fff;
+    background-color: #1f51a2;
+    font-size: 16px;
+    font-family: var(--fn-sans);
+}
+
+/* 프로젝트 등록하기 */
+.bd-bottom.regist{
+    padding: 40.5px 23.5px 164.5px 23.5px;
+    color: #333;
+}
+.cate-tit{
+    padding-bottom: 7px;
+}
+.category{
+    width: 194px;
+    height: 52px;
+    padding: 0 14px;
+    border: solid 1px #dddfe1;
+    letter-spacing: -0.96px;
+    font-size: 16px;
+    font-family: var(--fn-sans);
+    -webkit-appearance:none;
+    appearance:none;
+    background:url('/img/dropdown.webp') no-repeat right 5px center;
+}
+.regi01{
+    display: flex;
+    padding-bottom: 19px;
+    padding-left: 21.5px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.cate{
+    padding-right: 285px;
+}
+.input-box{
+    width: 545px;
+    height: 52px;
+    padding: 0 14px;
+    border: solid 1px #dddfe1;
+    letter-spacing: -0.96px;
+    font-size: 16px;
+    font-family: var(--fn-sans);
+}
+.input-box.width{
+    width: 310px;
+}
+.input-box.border{
+    border: 1px solid #00b488;
+}
+.regi02, .regi03{
+    display: flex;
+    flex-direction: column;
+    padding: 17px 0 19px 21.5px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.regi03{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.fl{
+    display: flex;
+    flex-direction: column;
+}
+.id-set{
+    width: 60px;
+    height: 30px;
+    margin: 20px 0 0 15px;
+    font-size: 12px;
+    letter-spacing: -0.72px;
+    line-height: 30px;
+    text-align: center;
+    color: #999;
+    border: solid 1px rgba(0, 0, 0, 0.1);
+}
+.regi01.stat{
+    padding-top: 14px;
+    border-bottom: 0;
+    padding-bottom: 0;
+}
+.category.prog .prog01{
+    position: relative;
+}
+.prog01{
+    position: absolute;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    /* margin: 0 12px; */
+    border-radius: 50%;
+    background-color: #00b488;
+}
+.regi-btn{
+    padding: 43.5px 0 0 21.5px;
+}
+.regi-btn > a{
+    width: 111px;
+    height: 39px;
+    padding: 7px 41px;
+    border-radius: 3px;
+    letter-spacing: -0.96px;
+}
+.regi-btn > a:first-child{
+    margin-right: 18px;
+    border: solid 1px #dddfe1;
+    color: #333;
+    box-sizing: border-box;
+}
+.regi-btn > a:last-child{
+    background-color: #1f51a2;
+    color: #fff;
+}
+input:focus{
+    outline: none;
+    border: 1px solid #0152bd;
+}
+select:focus{
+    outline: none;
+    border: 1px solid #0152bd;
+}
+/* 진행여부 셀렉트 박스 */
+.dropdown {
+    /* display: flex;
+    justify-content: space-between;
+    align-items: center; */
+    width: 194px;
+    height: 52px;
+    padding: 0 14px;
+    border: solid 1px #dddfe1;
+    letter-spacing: -0.96px;
+    font-size: 16px;
+    font-family: var(--fn-sans);
+    transition: all .5s ease;
+    position: relative;
+    color: #474747;
+    cursor: pointer;
+}
+.dropdown .select{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+/* .dropdown .select > i {
+    font-size: 13px;
+    color: #888;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    float: right;
+    line-height: 20px
+} */
+
+.dropdown:active {
+    /* background-color: #f8f8f8 */
+}
+.dropdown.active:hover,
+.dropdown.active {
+    /* box-shadow: 0 0 4px rgb(204, 204, 204); */
+    background-color: #fff;
+}
+/* .dropdown.active .select > img {
+    transform: rotate(-180deg)
+} */
+.dropdown .dropdown-menu {
+    position: absolute;
+    background-color: #fff;
+    width: 100%;
+    top: 52px;
+    left: 0;
+    /* margin-top: 10px; */
+    overflow: hidden;
+    display: none;
+    overflow-y: auto;
+    z-index: 9;
+}
+.dropdown .dropdown-menu li {
+    padding: 10px;
+    transition: all .2s ease-in-out;
+    cursor: pointer
+} 
+.dropdown .dropdown-menu {
+    padding: 0;
+    list-style: none
+}
+.dropdown .dropdown-menu li:hover {
+    background-color: #f2f2f2
+}
+.dropdown .dropdown-menu li:active {
+    background-color: #e2e2e2
+}
+.status-dot01::before{
+    display: inline-block;
+    content: "";
+    width: 10px;
+    height: 10px;
+    margin-right: 20px;
+    border-radius: 50%;
+    background-color: #00b488;
+}
+.status-dot02::before{
+    display: inline-block;
+    content: "";
+    width: 10px;
+    height: 10px;
+    margin-right: 20px;
+    border-radius: 50%;
+    background-color: #c8c8c8;
+}
+
+/* 데이트피커 */
+.datepicker{
+    width: 194px;
+    height: 52px;
+    padding: 0 14px;
+    border: solid 1px #dddfe1;
+    letter-spacing: -0.96px;
+    font-size: 16px;
+    font-family: var(--fn-sans);
+    cursor: pointer;
+}
+.ui-datepicker{
+    width: 248px;
+    height: 250px;
+    padding: 0 0 0;
+}
+.ui-datepicker .ui-datepicker-header{
+    background: #fff;
+    border: 0;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.ui-datepicker .ui-datepicker-title{
+    margin: 0 0;
+    padding-left: 10px;
+    text-align: left;
+    font-size: 12px;
+    font-family: var(--fn-sans);
+}
+.ui-datepicker .ui-datepicker-prev span, .ui-datepicker .ui-datepicker-next span{
+    top: 70%;
+    /* left: 40%; */
+}
+.ui-datepicker .ui-datepicker-prev{
+    left: 190px;
+}
+.ui-icon-circle-triangle-w{
+    background-position: -0px -17px;
+}
+.ui-icon-circle-triangle-e{
+    background-position: -63px -17px;
+}
+.ui-datepicker-next.ui-corner-all, .ui-datepicker-prev.ui-corner-all{
+    top: 10%;
+}
+.ui-datepicker-calendar{
+    font-family: var(--fn-sans);
+}
+.ui-datepicker-calendar > thead{
+    font-size: 12px;
+}
+.ui-datepicker-calendar > tbody{
+    font-size: 11px;
+}
+.ui-state-default,.ui-widget-content .ui-state-default{
+    border: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #fff;
+}
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #0152bd;
+    font-weight: normal;
+    color: #fff;
+    text-align: center;
+}
+.ui-datepicker-trigger{
+    position: relative;
+    top: 0px;
+    right: 30px;
+}
+/* faq */
+.board.faq{
+    /* height: 91.5vh; */
+    height: 95%;
+    background-color: #f4f7fc;
+}
+.side-nav{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 66px;
+    padding: 0 30px;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: var(--fn-sans);
+    letter-spacing: -1.08px;
+    color: #515151;
+    border-bottom: 1px solid #e5e5e5;
+}
+.status-look.faq02 .radio-button:nth-of-type(-n + 7) {
+    margin-right: 35px;
+}
+
+
+
+
+
+
+
+
+
+
+/* 호버 */
+.bd-desc:hover{
+    background-color: #e4ecf9;
+}
+.delete:hover{
+    text-decoration-line: underline;
 }

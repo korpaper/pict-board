@@ -12,8 +12,8 @@ $(window).on('load', function(){ //load가 되었을때 실행
 
     if (pageUrl.indexOf('pro') > -1) { //url에 about이라는 글자가 있으면 실행
         $('.nav').eq(0).addClass('active');
-    // } else if (pageUrl.indexOf('club') > -1) { //url에 contact라는 글자가 있으면 실행
-    //     $('.nav').eq(1).addClass('active');
+    } else if (pageUrl.indexOf('faq') > -1) { //url에 contact라는 글자가 있으면 실행
+        $('.nav').eq(1).addClass('active');
     // } else if (pageUrl.indexOf('forum') > -1) { //url에 contact라는 글자가 있으면 실행
     //     $('.nav').eq(2).addClass('active');
     // } else if (pageUrl.indexOf('contest') > -1) { //url에 contact라는 글자가 있으면 실행
@@ -59,4 +59,35 @@ $("body").on('click', '.dep2 > li', function(){
     if(!$(this).hasClass('active')){
         $(this).addClass('active').siblings().removeClass('active');
     }
+});
+
+// 관리자 셀렉트박스
+function chn_sltColor(){
+    var color = $("#status option:checked").css("color");
+    $("#status").css("color",color);
+}
+
+// 데이트피커
+$(function(){
+    $('.datepicker').datepicker({
+        dateFormat: 'yy-mm-dd',
+        showOn:"both",
+        buttonImage:"/img/Icon awesome-calendar-alt.webp",
+        buttonImageOnly:false
+    });
+})
+
+// 진행여부 셀렉트 박스
+$('.dropdown').click(function () {
+    $(this).attr('tabindex', 1).focus();
+    $(this).toggleClass('active');
+    $(this).find('.dropdown-menu').slideToggle(300);
+});
+$('.dropdown').focusout(function () {
+    $(this).removeClass('active');
+    $(this).find('.dropdown-menu').slideUp(300);
+});
+$('.dropdown .dropdown-menu li').click(function () {
+    $(this).parents('.dropdown').find('span').text($(this).text());
+    $(this).parents('.dropdown').find('input').attr('value', $(this).attr());
 });

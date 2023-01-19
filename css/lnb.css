@@ -95,6 +95,9 @@
 .dep2 > li.active{
     font-weight: bold;
 }
+.dep2 > li{
+    white-space: nowrap;
+}
 
 
 

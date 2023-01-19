@@ -283,181 +283,107 @@
                     <p class="nav01">2022년도 프로젝트</p>
                     <p class="nav02">1학기 한림대학교 캡스톤디자인 경진대회</p>
                 </div>
-                <a href="#lnk">프로젝트 관리</a>
+                <div class="cont-btn">
+                    <a href="#lnk">플렛폼 입장</a>
+                    <a href="#lnk">관리자 페이지</a>
+                    <a href="#lnk">프로젝트 관리</a>
+                </div>
             </div>
-            <div class="board">
+            <div class="board view">
                 <div class="bd-top">
-                    <input type="text" class="sc-title">
-                    <button class="sc-btn"><i class="fa-solid fa-magnifying-glass fa-lg"></i></button>
-                    <div class="status-look">
-                        <label for="all" class="radio-button">전체보기
-                            <input type="radio" name="status" id="all" checked value="1">
-                            <span class="custom-radio"></span>
-                        </label>
-                        <label for="yet" class="radio-button">미확인
-                            <input type="radio" name="status" id="yet" value="2">
-                            <span class="custom-radio"></span>
-                        </label>
-                        <label for="ing" class="radio-button">처리중
-                            <input type="radio" name="status" id="ing" value="3">
-                            <span class="custom-radio"></span>
-                        </label>
-                        <label for="done" class="radio-button">처리완료
-                            <input type="radio" name="status" id="done" value="4">
-                            <span class="custom-radio"></span>
-                        </label>
-                        <label for="impo" class="radio-button">처리불가
-                            <input type="radio" name="status" id="impo" value="5">
-                            <span class="custom-radio"></span>
-                        </label>
+                    <div class="cont-top-btn">
+                        <a href="#lnk">목록보기</a>
+                        <a href="#lnk">글삭제</a>
                     </div>
                 </div>
                 <div class="bd-bottom">
-                    <ul class="bd-head">
-                        <li>작성자</li>
-                        <li>제목</li>
-                        <li>작성일자</li>
-                        <li>처리여부</li>
-                        <li>글 삭제</li>
-                    </ul>
-                    <div class="bd-body">
-                        <div class="bd-scroll">
-                            <ul class="bd-desc">
-                                <li>이유리</li>
-                                <li>더픽트 최고 더픽트 최고 더픽트 최고 더픽트 최고 더픽트 최고 더픽트 최고 더픽트 최고 더픽트 최고</li>
-                                <li>2022-10-31</li>
-                                <li class="complete">처리완료</li>
-                                <li class="delete">삭제</li>
+                    <div class="mng-view">
+                        <div class="mv-head">
+                            <div class="mv-top">
+                                <select id="status" onchange="chn_sltColor()">
+                                    <option style="color: #b5b5b5;">미확인</option>
+                                    <option style="color: #006fff;">처리중</option>
+                                    <option style="color: #00b488;">처리완료</option>
+                                    <option style="color: #b20000;">처리불가</option>
+                                </select>
+                                <p class="bd-tit">더픽트 최고 더픽트 최고 더픽트 최고 더픽트 최고 더픽트 최고 더픽트 최고 더픽트 최고 더픽트 최고</p>
+                            </div>
+                            <ul class="mv-bottom">
+                                <li>작성자 : 이유리</li>
+                                <li>2022-10-13</li>
                             </ul>
-                            <ul class="bd-desc">
-                                <li>이유리</li>
-                                <li>더픽트 최고 더픽트 최고 더픽트 최고 더픽트 최고 더픽트 최고 더픽트 최고 더픽트 최고 더픽트 최고</li>
-                                <li>2022-10-31</li>
-                                <li class="doing">처리중</li>
-                                <li class="delete">삭제</li>
+                        </div>
+                        <div class="mv-desc">
+                            <p>
+                                4월 네째주 에이전시 순위 정보가 업데이트 되었습니다.
+                                에이전시 순위정보는 아래와 같은 부분으로 정해집니다.
+                            </p>
+                            <p>
+                                GDWEB DESIGN AWARDS는 DESIGN부분에 한정해 웹에이전시 순위를 산정하고 있습니다.  순위 산정은 객관적이고 신뢰적인 결과를 얻기 위해
+                                기업규모, 매출, 인원등은 순위산정 방식에서 제외했습니다, 
+                                또한 디자인에 대한 가중치를 높게 하기 위해 BEST로 선정된 작은 100점, GOOD은 50점, 일반작은 15점으로 책정하였습니다.
+                                디자인적 평가를 통해 웹에전시의 순위를 산정하고자 점수에 반영한 항목들은 다음과 같습니다.
+                            </p>
+                            <p>
+                                1. GDWEB DESIGN AWARDS에 선정된 작품수 1개당 15점 부여<br>
+                                2. 선정작중 GOOD으로 선정된 작품은 1개당 50점 부여 (GOOD선정 작품은 메인화면에서 확인 가능)<br>
+                                3. 선정작중 BEST로 선정된 작품은 1개당 100점 부여(BEST선정 작품은 메인화면에서 확인 가능)<br>
+                                4. 선정작품 조회수 4,000회당 1점 부여 <br>
+                                5. 웹에전시별 포트폴리오 페이지 조회수 50회당 1점 부여<br>
+                                6. 선장작 이외에 에이전시가 포트폴리오 페이지에 등록한 작품당 3점 부여<br>
+                            </p>
+                            <div class="down-file">
+                                <ul>
+                                    <li>
+                                        <a href="#lnk" download=""><img src="/img/Icon awesome-file-alt.webp" alt="파일 다운로드">cjaqnvkdlf.pdf</a>
+                                    </li>
+                                    <li>
+                                        <a href="#lnk" download=""><img src="/img/Icon awesome-file-alt.webp" alt="파일 다운로드">cjaqnvkdlf.pdf</a>
+                                    </li>
+                                    <li>
+                                        <a href="#lnk" download=""><img src="/img/Icon awesome-file-alt.webp" alt="파일 다운로드">cjaqnvkdlf.pdf</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="reply">
+                            <ul class="reply-cont">
+                                <li><span class="dot">더픽트</span>이유리 팀장</li>
+                                <li>안녕하세요. 더픽트에서 답변드립니다.<br>
+                                    완전히 불가합니다. 불가불가 안돼안돼.</li>
+                                <li>2022-10-31 20:00</li>
+                                <li>
+                                    <button>수정</button>
+                                    <button>삭제</button>
+                                </li>
                             </ul>
-                            <ul class="bd-desc">
+                            <ul class="reply-cont">
                                 <li>이유리</li>
-                                <li>더픽트 최고 더픽트 최고 더픽트 최고 더픽트 최고 더픽트 최고 더픽트 최고 더픽트 최고 더픽트 최고</li>
-                                <li>2022-10-31</li>
-                                <li class="yet">미확인</li>
-                                <li class="delete">삭제</li>
+                                <li>왜안되나요 해주세요 해준다고 했잖아요 해줘해줘해줘해줘</li>
+                                <li>2022-10-31 20:00</li>
+                                <li>
+                                    <button>수정</button>
+                                </li>
                             </ul>
-                            <ul class="bd-desc">
-                                <li>이유리</li>
-                                <li>더픽트 최고 더픽트 최고 더픽트 최고 더픽트 최고 더픽트 최고 더픽트 최고 더픽트 최고 더픽트 최고</li>
-                                <li>2022-10-31</li>
-                                <li class="doing">처리중</li>
-                                <li class="delete">삭제</li>
-                            </ul>
-                            <ul class="bd-desc">
-                                <li>이유리</li>
-                                <li>더픽트 최고 더픽트 최고 더픽트 최고 더픽트 최고 더픽트 최고 더픽트 최고 더픽트 최고 더픽트 최고</li>
-                                <li>2022-10-31</li>
-                                <li class="yet">미확인</li>
-                                <li class="delete">삭제</li>
-                            </ul>
-                            <ul class="bd-desc">
-                                <li>이유리</li>
-                                <li>더픽트 최고 더픽트 최고 더픽트 최고 더픽트 최고 더픽트 최고 더픽트 최고 더픽트 최고 더픽트 최고</li>
-                                <li>2022-10-31</li>
-                                <li class="yet">미확인</li>
-                                <li class="delete">삭제</li>
-                            </ul>
-                            <ul class="bd-desc">
-                                <li>이유리</li>
-                                <li>더픽트 최고 더픽트 최고 더픽트 최고 더픽트 최고 더픽트 최고 더픽트 최고 더픽트 최고 더픽트 최고</li>
-                                <li>2022-10-31</li>
-                                <li class="impo">처리불가</li>
-                                <li class="delete">삭제</li>
-                            </ul>
-                            <ul class="bd-desc">
-                                <li>이유리</li>
-                                <li>더픽트 최고 더픽트 최고 더픽트 최고 더픽트 최고 더픽트 최고 더픽트 최고 더픽트 최고 더픽트 최고</li>
-                                <li>2022-10-31</li>
-                                <li class="impo">처리불가</li>
-                                <li class="delete">삭제</li>
-                            </ul>
-                            <ul class="bd-desc">
-                                <li>이유리</li>
-                                <li>더픽트 최고 더픽트 최고 더픽트 최고 더픽트 최고 더픽트 최고 더픽트 최고 더픽트 최고 더픽트 최고</li>
-                                <li>2022-10-31</li>
-                                <li class="complete">처리완료</li>
-                                <li class="delete">삭제</li>
-                            </ul>
-                            <ul class="bd-desc">
-                                <li>이유리</li>
-                                <li>더픽트 최고 더픽트 최고 더픽트 최고 더픽트 최고 더픽트 최고 더픽트 최고 더픽트 최고 더픽트 최고</li>
-                                <li>2022-10-31</li>
-                                <li class="complete">처리완료</li>
-                                <li class="delete">삭제</li>
-                            </ul>
-                            <ul class="bd-desc">
-                                <li>이유리</li>
-                                <li>더픽트 최고 더픽트 최고 더픽트 최고 더픽트 최고 더픽트 최고 더픽트 최고 더픽트 최고 더픽트 최고</li>
-                                <li>2022-10-31</li>
-                                <li class="complete">처리완료</li>
-                                <li class="delete">삭제</li>
-                            </ul>
-                            <ul class="bd-desc">
-                                <li>이유리</li>
-                                <li>더픽트 최고 더픽트 최고 더픽트 최고 더픽트 최고 더픽트 최고 더픽트 최고 더픽트 최고 더픽트 최고</li>
-                                <li>2022-10-31</li>
-                                <li class="complete">처리완료</li>
-                                <li class="delete">삭제</li>
-                            </ul>
-                            <ul class="bd-desc">
-                                <li>이유리</li>
-                                <li>더픽트 최고 더픽트 최고 더픽트 최고 더픽트 최고 더픽트 최고 더픽트 최고 더픽트 최고 더픽트 최고</li>
-                                <li>2022-10-31</li>
-                                <li class="complete">처리완료</li>
-                                <li class="delete">삭제</li>
-                            </ul>
-                            <ul class="bd-desc">
-                                <li>이유리</li>
-                                <li>더픽트 최고 더픽트 최고 더픽트 최고 더픽트 최고 더픽트 최고 더픽트 최고 더픽트 최고 더픽트 최고</li>
-                                <li>2022-10-31</li>
-                                <li class="complete">처리완료</li>
-                                <li class="delete">삭제</li>
-                            </ul>
-                            <ul class="bd-desc">
-                                <li>이유리</li>
-                                <li>더픽트 최고 더픽트 최고 더픽트 최고 더픽트 최고 더픽트 최고 더픽트 최고 더픽트 최고 더픽트 최고</li>
-                                <li>2022-10-31</li>
-                                <li class="complete">처리완료</li>
-                                <li class="delete">삭제</li>
-                            </ul>
-                            <ul class="bd-desc">
-                                <li>이유리</li>
-                                <li>더픽트 최고 더픽트 최고 더픽트 최고 더픽트 최고 더픽트 최고 더픽트 최고 더픽트 최고 더픽트 최고</li>
-                                <li>2022-10-31</li>
-                                <li class="complete">처리완료</li>
-                                <li class="delete">삭제dsfsdf</li>
-                            </ul>
-                            <ul class="bd-desc">
-                                <li>이유리</li>
-                                <li>더픽트 최고 더픽트 최고 더픽트 최고 더픽트 최고 더픽트 최고 더픽트 최고 더픽트 최고 더픽트 최고</li>
-                                <li>2022-10-31</li>
-                                <li class="complete">처리완료</li>
-                                <li class="delete">삭제dsfsdf</li>
-                            </ul>
-                            <ul class="bd-desc">
-                                <li>이유리</li>
-                                <li>더픽트 최고 더픽트 최고 더픽트 최고 더픽트 최고 더픽트 최고 더픽트 최고 더픽트 최고 더픽트 최고</li>
-                                <li>2022-10-31</li>
-                                <li class="complete">처리완료</li>
-                                <li class="delete">삭제dsfsdf</li>
-                            </ul>
-                            <ul class="bd-desc">
-                                <li>이유리</li>
-                                <li>더픽트 최고 더픽트 최고 더픽트 최고 더픽트 최고 더픽트 최고 더픽트 최고 더픽트 최고 더픽트 최고</li>
-                                <li>2022-10-31</li>
-                                <li class="complete">처리완료</li>
-                                <li class="delete">삭제dsfsdf</li>
+                            <ul class="reply-cont">
+                                <li><span>더픽트</span>고예림 주임</li>
+                                <li>절대안돼 절대안돼</li>
+                                <li>2022-10-31 20:00</li>
+                                <li>
+                                    <button>수정</button>
+                                    <button>삭제</button>
+                                </li>
                             </ul>
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="editor">
+                <p class="editor-tit">댓글쓰기</p>
+                <div class="smart-edit">
+
+                </div>
+                <button class="app-reply">댓글 등록</button>
             </div>
         </div>
     </div>

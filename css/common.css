@@ -8,7 +8,9 @@
 body{
     font-size: 16px;
     font-family: 'Noto Sans KR', sans-serif;
-    overflow: hidden;
+    /* overflow: hidden; */
+    overflow: auto;
+    color: #515151;
 }
 
 :root {
@@ -16,6 +18,7 @@ body{
     --color-gray: #abafb3;
     --color-blue: #0152bd;
     --btn-color-blue: #1f51a2;
+    --bd-color: rgba(0, 0, 0, 0.1);
 }
 
 .blind {
@@ -30,4 +33,8 @@ body{
 button{
     background: none;
     border: none;
+}
+
+.nav01.no-after::after{
+    display: none;
 }
