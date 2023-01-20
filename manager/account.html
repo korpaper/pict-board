@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script
+    src="https://code.jquery.com/jquery-3.6.3.js"
+    integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
+    crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/8932d9ee39.js" crossorigin="anonymous"></script>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous"> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" integrity="sha512-uto9mlQzrs59VwILcLiRYeLKPPbS/bT71da/OEBYEwcdNUk8jYIy+D176RYoop1Da+f9mvkYrmj5MCLZWEtQuA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" integrity="sha512-aOG0c6nPNzGk+5zjwyJaoRUgCdOrfSDhmMID2u4+OIslr0GjpLKo7Xm0Ao3xmpM4T8AmIouRkqwj1nrdVsLKEQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/reset.css" type="text/css">
+    <link rel="stylesheet" href="/css/common.css" type="text/css">
+    <link rel="stylesheet" href="/css/main.css" type="text/css">
+    <link rel="stylesheet" href="/css/header.css" type="text/css">
+    <link rel="stylesheet" href="/css/lnb.css" type="text/css">
+    <link rel="stylesheet" href="/css/sub.css" type="text/css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="header">
+        <div class="h-inner">
+            <h1>
+                <a href="#lnk"><img src="/img/logo.webp" alt="로고"></a>
+            </h1>
+            <nav>
+                <ul>
+                    <li>
+                        <a class="nav" href="pro.html">프로젝트 관리</a>
+                        <ul class="sub">
+                            <li><a href="pro.html">프로젝트 목록보기</a></li>
+                            <li><a href="pro-regist.html">프로젝트 등록하기</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="nav" href="faq.html">FAQ</a>
+                        <ul class="sub">
+                            <li><a href="faq.html">FAQ 목록보기</a></li>
+                            <li><a href="faq-regist.html">FAQ 등록하기</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="nav" href="notice.html">공지사항</a>
+                        <ul class="sub">
+                            <li><a href="notice.html">공지사항 목록보기</a></li>
+                            <li><a href="notice-regist.html">공지사항 등록하기</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="nav" href="#lnk">계정</a>
+                        <ul class="sub">
+                            <li><a href="#lnk">계정 발급하기</a></li>
+                            <li><a href="#lnk">계정 리스트</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="nav" href="#lnk">알림센터</a></li>
+                </ul>
+            </nav>
+            <aside>
+                <img src="/img/Profile.webp" alt="계정">
+                <div class="profile-name">
+                    더픽트 통합계정
+                    <span class="logout">로그아웃</span>
+                </div>
+            </aside>
+        </div>
+    </div>
+    <div class="sub-wrap">
+        <div class="lnb">
+            <div class="lnb-wrap">
+                <div class="lnb-list">
+                    <div class="side-nav">계정</div>
+                </div>
+            </div>
+        </div>
+        <div class="cont-wrap">
+            <div class="cont-top">
+                <div class="bc">
+                    <p class="nav01 no-after">계정발급</p>
+                </div>
+            </div>
+            <div class="board view">
+                <div class="bd-top"></div>
+                <div class="bd-bottom regist">
+                    <p class="acc-tit">담당자 계정</p>
+                    <div class="acc">
+                        <div class="regi02 faq-list">
+                            <label for="account" class="cate-tit">ID</label>
+                            <input type="text" id="account" name="account" class="input-box">
+                        </div>
+                        <div class="regi02 faq-list">
+                            <label for="password" class="cate-tit">PASSWORD</label>
+                            <input type="password" id="password" name="password" class="input-box" autocomplete="off">
+                        </div>
+                    </div>
+                    <p class="acc-tit tit02">담당자 정보</p>
+                    <div class="acc">
+                        <div class="acc-inner01">
+                            <div class="regi02 faq-list">
+                                <label for="faq-title" class="cate-tit">ID</label>
+                                <input type="text" id="faq-title" name="faq-title" class="input-box">
+                            </div>
+                            <div class="regi02 faq-list">
+                                <label for="faq-title" class="cate-tit">PASSWORD</label>
+                                <input type="text" id="faq-title" name="faq-title" class="input-box">
+                            </div>
+                            <div class="regi02 faq-list">
+                                <label for="faq-title" class="cate-tit">PASSWORD</label>
+                                <input type="text" id="faq-title" name="faq-title" class="input-box">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="regi-btn faq-btns">
+                        <a href="#lnk">취소</a>
+                        <a href="#lnk">등록</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script> -->
+    <script src="/js/script.js"></script>
+</body>
+</html>

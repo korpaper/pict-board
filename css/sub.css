@@ -60,15 +60,20 @@
     color: #999;
 }
 .bd-top{
-    position: relative;
+    /* position: relative; */
     display: flex;
     justify-content: space-between;
     padding: 13px 0;
 }
+.sc-wrap{
+    position: relative;
+    width: 30%;
+    height: 39px;
+}
 .sc-title{
     border: 0;
-    width: 473px;
-    height: 39px;
+    width: 100%;
+    height: 100%;
     padding: 0 20px;
     border-radius: 19.5px;
     font-family: var(--fn-sans);
@@ -78,8 +83,8 @@
 }
 .sc-btn{
     position: absolute;
-    left: 430px;
-    bottom: 23px;
+    right: 3%;
+    top: 13px;
 }
 /* radio */
 .status-look {
@@ -159,6 +164,16 @@
     min-height: 500px;
     overflow-y: scroll;
 }
+.bd-scroll::-webkit-scrollbar {
+    width: 7px;
+}
+.bd-scroll::-webkit-scrollbar-thumb {
+    background-color: #e5e5e5;
+    background-clip: padding-box;
+}
+.bd-scroll::-webkit-scrollbar-track {
+    background-color: #fff;
+}
 .bd-desc{
     display: grid;
     grid-template-columns: 10% 60% 10% 10% 10%;
@@ -174,9 +189,6 @@
 }
 .bd-desc > li:first-child{
     text-align: center;
-}
-.bd-desc > li:nth-child(2){
-    /* padding-left: 40px; */
 }
 .bd-desc > li:nth-child(n + 3){
     padding-left: 13px;
@@ -671,6 +683,253 @@ select:focus{
 .status-look.faq02 .radio-button:nth-of-type(-n + 7) {
     margin-right: 35px;
 }
+@media (max-width : 1762px){
+    .status-look.faq02 .radio-button:nth-of-type(-n + 7) {
+        margin-right: 10px;
+    }
+}
+@media (max-width : 1487px){
+    .status-look.faq02 .radio-button{
+        font-size: 14px;
+    }
+    .status-look .radio-button .custom-radio {
+        height: 15px;
+        width: 15px;
+    }
+    .status-look .custom-radio:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        background: #fff;
+    }
+}
+/* faq */
+.bd-head.faq-head{
+    display: grid;
+    grid-template-columns: 10% 10% 60% 10% 10%;
+    width: 100%;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    color: #515151;
+}
+.bd-desc.faq-desc{
+    display: grid;
+    grid-template-columns: 10% 10% 60% 10% 10%;
+    width: 100%;
+    margin: 10px 0;
+}
+.bd-desc.faq-desc > li:nth-child(2){
+    padding-left: 40px;
+}
+.bd-desc.faq-desc > li:nth-child(n + 3) {
+    padding-left: 0;
+}
+.bd-desc.faq-desc > li:nth-child(n + 4) {
+    padding-left: 8px;
+}
+/* faq 보기 */
+.side-btn{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 13%;
+}
+.side-btn > li > a{
+    width: 121px;
+    height: 39px;
+    padding: 5px 32px;
+    background-color: #fff;
+    letter-spacing: -0.96px;
+    color: #999;
+    border: solid 1px #e5e5e5;
+}
+.faq-mv{
+    display: flex;
+    justify-content: space-between;
+}
+.faq-mv > div{
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+}
+.faq-mv > div > a{
+    padding-right: 20px;
+}
+.faq-mv > div > a > img{
+    padding-right: 10px;
+}
+.other-list{
+    border-top: 1px solid #aeaeae;
+    border-bottom: 1px solid #aeaeae;
+}
+.other-list > ul{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 59px;
+    padding: 17px 45px;
+}
+.prev-list{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.other-list > ul > li{
+    letter-spacing: -0.96px;
+}
+.other-list > ul > li:first-child{
+    font-weight: 500;
+    color: #333;
+}
+.other-list > ul > li:nth-child(2){
+    margin: 0 53px 0 23px;
+}
+.other-list > ul > li:nth-child(2) button{
+    cursor: pointer;
+}
+/* faq 등록하기 */
+.cate.faq-cate{
+    display: flex;
+    align-items: center;
+}
+.cate.faq-cate .cate-tit{
+    padding-right: 118px;
+    font-weight: bold;
+    letter-spacing: -0.96px;
+}
+.regi02.faq-list{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.regi02.faq-list > label, .regi02.faq-list > p{
+    padding-right: 113px;
+    font-weight: bold;
+    letter-spacing: -0.96px;
+}
+.smart-edit.faq{
+    width: 88%;
+    margin-left: 30px;
+}
+/* 파일박스 */
+.filebox input[type="file"] {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip:rect(0,0,0,0);
+    border: 0;
+}
+
+.regi02.faq-list.filebox > label {
+    padding-right: 0;
+    padding: 16px 31px;
+    margin-left: 10px;
+    border: solid 1px #dddfe1;
+    background-color: #a6a6a6;
+    font-weight: normal;
+    color: #fff;
+    cursor: pointer;
+}
+
+  /* named upload */
+.filebox .upload-name {
+    width: 538px;
+    height: 52px;
+    padding: 0 14px;
+    border: solid 1px #dddfe1;
+    background: #fff;
+    letter-spacing: -0.96px;
+    font-size: 16px;
+    color: #d4d6dc;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    font-family: var(--fn-sans);
+}
+.regi02.faq-list.filebox.flexbox{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.regi02.regi04.faq-list.filebox{
+    padding: 0 0 0 0;
+    border-bottom: 0;
+}
+.file-desc{
+    margin-left: 167px;
+    padding-top: 5px;
+    font-size: 13px;
+    line-height: 1.77;
+    letter-spacing: -0.78px;
+    color: #d4d6dc;
+}
+.regi-btn.faq-btns{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    /* margin-top: 165px; */
+}
+.regi-btn.faq-btns > a{
+    padding: 0 0;
+    line-height: 39px;
+    text-align: center;
+}
+/* notice */
+.bd-head.notice-head {
+    display: grid;
+    grid-template-columns: 10% 70% 10% 10%;
+    width: 100%;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    color: #515151;
+}
+.bd-desc.notice-desc {
+    display: grid;
+    grid-template-columns: 10% 70% 10% 10%;
+    width: 100%;
+    margin: 10px 0;
+}
+.bd-head.notice-head > li:nth-child(2) {
+    padding-left: 0px;
+}
+.bd-desc > li:nth-child(n + 3) {
+    padding-left: 7px;
+}
+/* 계정 */
+.acc{
+    display: flex;
+    padding-bottom: 45.4px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.acc .regi02{
+    padding: 17px 0 19px 21.5px;
+    border-bottom: 0;
+}
+.acc .regi02.faq-list > label{
+    padding-right: 22px;
+} 
+.acc .regi02.faq-list .cate-tit{
+    padding-bottom: 0;
+}
+.acc-tit{
+    padding-left: 10px;
+    font-weight: bold;
+    letter-spacing: -0.96px;
+}
+.acc-tit.tit02{
+    padding-top: 26.5px;
+}
+.acc-inner01{
+    display: flex;
+}
+
+
 
 
 

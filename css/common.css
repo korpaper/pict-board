@@ -12,6 +12,16 @@ body{
     overflow: auto;
     color: #515151;
 }
+body::-webkit-scrollbar {
+    width: 7px;
+}
+body::-webkit-scrollbar-thumb {
+    background-color: #e5e5e5;
+    background-clip: padding-box;
+}
+body::-webkit-scrollbar-track {
+    background-color: #fff;
+}
 
 :root {
 	--fn-sans: 'Noto Sans KR', sans-serif;
@@ -37,4 +47,8 @@ button{
 
 .nav01.no-after::after{
     display: none;
+}
+
+input::placeholder{
+    color: #d4d6dc;
 }

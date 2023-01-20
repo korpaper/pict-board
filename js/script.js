@@ -14,10 +14,10 @@ $(window).on('load', function(){ //load가 되었을때 실행
         $('.nav').eq(0).addClass('active');
     } else if (pageUrl.indexOf('faq') > -1) { //url에 contact라는 글자가 있으면 실행
         $('.nav').eq(1).addClass('active');
-    // } else if (pageUrl.indexOf('forum') > -1) { //url에 contact라는 글자가 있으면 실행
-    //     $('.nav').eq(2).addClass('active');
-    // } else if (pageUrl.indexOf('contest') > -1) { //url에 contact라는 글자가 있으면 실행
-    //     $('.nav').eq(3).addClass('active');
+    } else if (pageUrl.indexOf('notice') > -1) { //url에 contact라는 글자가 있으면 실행
+        $('.nav').eq(2).addClass('active');
+    } else if (pageUrl.indexOf('account') > -1) { //url에 contact라는 글자가 있으면 실행
+        $('.nav').eq(3).addClass('active');
     // } else if (pageUrl.indexOf('cont') > -1) { //url에 contact라는 글자가 있으면 실행
     //     $('.nav').eq(4).addClass('active');
     // } else if (pageUrl.indexOf('icc') > -1) { //url에 contact라는 글자가 있으면 실행
@@ -91,3 +91,20 @@ $('.dropdown .dropdown-menu li').click(function () {
     $(this).parents('.dropdown').find('span').text($(this).text());
     $(this).parents('.dropdown').find('input').attr('value', $(this).attr());
 });
+
+// input file
+$(document).ready(function(){
+    var fileTarget = $('.filebox .upload-hidden');
+
+    fileTarget.on('change', function(){  // 값이 변경되면
+      if(window.FileReader){  // modern browser
+        var filename = $(this)[0].files[0].name;
+      } 
+      else {  // old IE
+        var filename = $(this).val().split('/').pop().split('\\').pop();  // 파일명만 추출
+      }
+      
+      // 추출한 파일명 삽입
+      $(this).siblings('.upload-name').val(filename);
+    });
+  }); 
