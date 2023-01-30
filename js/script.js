@@ -111,4 +111,4 @@ $(".notice-cont").hide();
     $(".bd-desc.notice-desc").click(function() {
         $(this).next(".notice-cont").stop().slideToggle(300);
         $(this).next(".notice-cont").siblings(".notice-cont").slideUp(300); // 1개씩 펼치기
-    });
+});
