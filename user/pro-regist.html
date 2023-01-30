@@ -26,43 +26,23 @@
             <h1>
                 <a href="#lnk"><img src="/img/logo.webp" alt="로고"></a>
             </h1>
-            <nav>
+            <nav class="user-nav">
                 <ul>
                     <li>
-                        <a class="nav" href="pro.html">프로젝트 관리</a>
-                        <ul class="sub">
-                            <li><a href="pro.html">프로젝트 목록보기</a></li>
-                            <li><a href="pro-regist.html">프로젝트 등록하기</a></li>
-                        </ul>
+                        <a class="nav" href="pro.html">내 프로젝트</a>
                     </li>
                     <li>
                         <a class="nav" href="faq.html">FAQ</a>
-                        <ul class="sub">
-                            <li><a href="faq.html">FAQ 목록보기</a></li>
-                            <li><a href="faq-regist.html">FAQ 등록하기</a></li>
-                        </ul>
                     </li>
                     <li>
                         <a class="nav" href="notice.html">공지사항</a>
-                        <ul class="sub">
-                            <li><a href="notice.html">공지사항 목록보기</a></li>
-                            <li><a href="notice-regist.html">공지사항 등록하기</a></li>
-                        </ul>
                     </li>
-                    <li>
-                        <a class="nav" href="account.html">계정</a>
-                        <ul class="sub">
-                            <li><a href="account.html">계정 발급하기</a></li>
-                            <li><a href="account-list.html">계정 리스트</a></li>
-                        </ul>
-                    </li>
-                    <li><a class="nav" href="noti.html">알림센터</a></li>
                 </ul>
             </nav>
             <aside>
                 <img src="/img/Profile.webp" alt="계정">
                 <div class="profile-name">
-                    더픽트 통합계정
+                    한국거래소
                     <span class="logout">로그아웃</span>
                 </div>
             </aside>
@@ -72,14 +52,49 @@
         <div class="lnb">
             <div class="lnb-wrap">
                 <div class="lnb-list">
-                    <div class="side-nav">공지사항 등록하기</div>
+                    <div class="dep1-wrap">
+                        <span class="dep1">내 프로젝트</span>
+                    </div>
+                    <div class="dep1-wrap">
+                        <span class="dep1">FAQ</span>
+                        <span class="arrow"></span>
+                    </div>
+                    <div class="dep2-wrap">
+                        <ul class="dep2">
+                            <li>
+                                <a href="#lnk">로그인</a>
+                            </li>
+                            <li>
+                                <a href="#lnk">관리자</a>
+                            </li>
+                            <li>
+                                <a href="#lnk">회원DB</a>
+                            </li>
+                            <li>
+                                <a href="#lnk">이벤트</a>
+                            </li>
+                            <li>
+                                <a href="#lnk">유지보수 연장</a>
+                            </li>
+                            <li>
+                                <a href="#lnk">새 기능</a>
+                            </li>
+                            <li>
+                                <a href="#lnk">기타</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="dep1-wrap">
+                        <span class="dep1">공지사항</span>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="cont-wrap">
             <div class="cont-top">
                 <div class="bc">
-                    <p class="nav01 no-after">공지사항 등록하기</p>
+                    <p class="nav01">내 프로젝트</p>
+                    <p class="nav02">글 등록하기</p>
                 </div>
             </div>
             <div class="board view">
@@ -92,17 +107,41 @@
                     <div class="regi02 faq-list">
                         <p>내용</p>
                         <div class="smart-edit faq" style="background-color: red;">
-
+                            
                         </div>
                     </div>
                     <div class="regi02 faq-list filebox flexbox">
                         <div class="regi02 regi04 faq-list filebox">
-                            <p>파일첨부</p>
+                            <p>파일첨부 1</p>
                             <input class="upload-name" value="파일선택" disabled="disabled">
-                            <label for="faq-file" class="cate-tit">찾아보기</label>
-                            <input type="file" id="faq-file" name="faq-file" class="input-box upload-hidden">
+                            <label for="faq-file01" class="cate-tit">찾아보기</label>
+                            <input type="file" id="faq-file01" name="faq-file" class="input-box upload-hidden">
                         </div>
-                        <div class="file-desc">
+                        <div class="file-desc user">
+                            ※ jpg, jpeg, gif, png, bmp, doc, docx, hwp, xls, xlsx, zip, pdf, ppt, pptx 형식만 지원<br>
+                            ※ 파일 사이즈 2MB까지 업로드 가능합니다.
+                        </div>
+                    </div>
+                    <div class="regi02 faq-list filebox flexbox">
+                        <div class="regi02 regi04 faq-list filebox">
+                            <p>파일첨부 2</p>
+                            <input class="upload-name" value="파일선택" disabled="disabled">
+                            <label for="faq-file02" class="cate-tit">찾아보기</label>
+                            <input type="file" id="faq-file02" name="faq-file" class="input-box upload-hidden">
+                        </div>
+                        <div class="file-desc user">
+                            ※ jpg, jpeg, gif, png, bmp, doc, docx, hwp, xls, xlsx, zip, pdf, ppt, pptx 형식만 지원<br>
+                            ※ 파일 사이즈 2MB까지 업로드 가능합니다.
+                        </div>
+                    </div>
+                    <div class="regi02 faq-list filebox flexbox">
+                        <div class="regi02 regi04 faq-list filebox">
+                            <p>파일첨부 3</p>
+                            <input class="upload-name" value="파일선택" disabled="disabled">
+                            <label for="faq-file03" class="cate-tit">찾아보기</label>
+                            <input type="file" id="faq-file03" name="faq-file" class="input-box upload-hidden">
+                        </div>
+                        <div class="file-desc user">
                             ※ jpg, jpeg, gif, png, bmp, doc, docx, hwp, xls, xlsx, zip, pdf, ppt, pptx 형식만 지원<br>
                             ※ 파일 사이즈 2MB까지 업로드 가능합니다.
                         </div>

@@ -8,19 +8,11 @@
 body{
     font-size: 16px;
     font-family: 'Noto Sans KR', sans-serif;
-    /* overflow: hidden; */
     overflow: auto;
     color: #515151;
 }
 body::-webkit-scrollbar {
-    width: 7px;
-}
-body::-webkit-scrollbar-thumb {
-    background-color: #e5e5e5;
-    background-clip: padding-box;
-}
-body::-webkit-scrollbar-track {
-    background-color: #fff;
+    display: none;
 }
 
 :root {

@@ -44,7 +44,6 @@ $('body').on('mouseleave', 'aside', function(){
 // lnb 아코디언, 액티브
 $("body").on('click', '.dep1-wrap', function(){
     $(this).next(".dep2-wrap").stop().slideToggle(300);
-    $(this).next(".dep2-wrap").siblings(".dep2-wrap").slideUp(300); // 1개씩 펼치기
     $(this).children('.arrow').toggleClass('active');
     if(!$(this).hasClass('active')){
         $(this).addClass('active').siblings().removeClass('active');
@@ -108,3 +107,23 @@ $(document).ready(function(){
       $(this).siblings('.upload-name').val(filename);
     });
   }); 
+
+
+// 메세지 전송 얼럿창
+  $('.msg').click(function(){
+    confirm("도메인 만료 예정 메세지를 보내시겠습니까?")
+  });
+
+// faq 아코디언
+$(".faq-cont").hide();
+    $(".bd-desc.faq-desc").click(function() {
+        $(this).next(".faq-cont").stop().slideToggle(300);
+        $(this).next(".faq-cont").siblings(".faq-cont").slideUp(300); // 1개씩 펼치기
+    });
+
+// notice 아코디언
+$(".notice-cont").hide();
+    $(".bd-desc.notice-desc").click(function() {
+        $(this).next(".notice-cont").stop().slideToggle(300);
+        $(this).next(".notice-cont").siblings(".notice-cont").slideUp(300); // 1개씩 펼치기
+    });

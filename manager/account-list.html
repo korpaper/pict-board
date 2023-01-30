@@ -10,6 +10,8 @@
     crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/8932d9ee39.js" crossorigin="anonymous"></script>
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous"> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" integrity="sha512-uto9mlQzrs59VwILcLiRYeLKPPbS/bT71da/OEBYEwcdNUk8jYIy+D176RYoop1Da+f9mvkYrmj5MCLZWEtQuA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" integrity="sha512-aOG0c6nPNzGk+5zjwyJaoRUgCdOrfSDhmMID2u4+OIslr0GjpLKo7Xm0Ao3xmpM4T8AmIouRkqwj1nrdVsLKEQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="/css/reset.css" type="text/css">
     <link rel="stylesheet" href="/css/common.css" type="text/css">
     <link rel="stylesheet" href="/css/main.css" type="text/css">
@@ -69,10 +71,6 @@
     <div class="sub-wrap">
         <div class="lnb">
             <div class="lnb-wrap">
-                <div class="search">
-                    <input type="text" name="search" id="">
-                    <button><i class="fa-solid fa-magnifying-glass fa-lg"></i></button>
-                </div>
                 <div class="lnb-list">
                     <div class="dep1-wrap">
                         <span class="dep1">2022년도 프로젝트</span>
@@ -280,110 +278,54 @@
         <div class="cont-wrap">
             <div class="cont-top">
                 <div class="bc">
-                    <p class="nav01">2022년도 프로젝트</p>
+                    <p class="nav01">계정</p>
                     <p class="nav02">1학기 한림대학교 캡스톤디자인 경진대회</p>
-                </div>
-                <div class="cont-btn">
-                    <a href="#lnk">플렛폼 입장</a>
-                    <a href="#lnk">관리자 페이지</a>
-                    <a href="#lnk">프로젝트 관리</a>
                 </div>
             </div>
             <div class="board view">
-                <div class="bd-top">
-                    <div class="cont-top-btn">
-                        <a href="#lnk">목록보기</a>
-                        <a href="#lnk">글삭제</a>
-                    </div>
-                </div>
-                <div class="bd-bottom">
-                    <div class="mng-view">
-                        <div class="mv-head">
-                            <div class="mv-top">
-                                <select id="status" onchange="chn_sltColor()">
-                                    <option style="color: #b5b5b5;">미확인</option>
-                                    <option style="color: #006fff;">처리중</option>
-                                    <option style="color: #00b488;">처리완료</option>
-                                    <option style="color: #b20000;">처리불가</option>
-                                </select>
-                                <p class="bd-tit">더픽트 최고 더픽트 최고 더픽트 최고 더픽트 최고 더픽트 최고 더픽트 최고 더픽트 최고 더픽트 최고</p>
-                            </div>
-                            <ul class="mv-bottom">
-                                <li>작성자 : 이유리</li>
-                                <li>2022-10-13</li>
-                            </ul>
+                <div class="bd-top"></div>
+                <form class="bd-bottom regist">
+                    <p class="acc-tit">담당자 계정</p>
+                    <div class="acc">
+                        <div class="regi02 faq-list" style="padding-right: 85px;">
+                            <label for="account" class="cate-tit">ID</label>
+                            <input type="text" id="account" name="account" class="input-box">
                         </div>
-                        <div class="mv-desc">
-                            <p>
-                                4월 네째주 에이전시 순위 정보가 업데이트 되었습니다.
-                                에이전시 순위정보는 아래와 같은 부분으로 정해집니다.
-                            </p>
-                            <p>
-                                GDWEB DESIGN AWARDS는 DESIGN부분에 한정해 웹에이전시 순위를 산정하고 있습니다.  순위 산정은 객관적이고 신뢰적인 결과를 얻기 위해
-                                기업규모, 매출, 인원등은 순위산정 방식에서 제외했습니다, 
-                                또한 디자인에 대한 가중치를 높게 하기 위해 BEST로 선정된 작은 100점, GOOD은 50점, 일반작은 15점으로 책정하였습니다.
-                                디자인적 평가를 통해 웹에전시의 순위를 산정하고자 점수에 반영한 항목들은 다음과 같습니다.
-                            </p>
-                            <p>
-                                1. GDWEB DESIGN AWARDS에 선정된 작품수 1개당 15점 부여<br>
-                                2. 선정작중 GOOD으로 선정된 작품은 1개당 50점 부여 (GOOD선정 작품은 메인화면에서 확인 가능)<br>
-                                3. 선정작중 BEST로 선정된 작품은 1개당 100점 부여(BEST선정 작품은 메인화면에서 확인 가능)<br>
-                                4. 선정작품 조회수 4,000회당 1점 부여 <br>
-                                5. 웹에전시별 포트폴리오 페이지 조회수 50회당 1점 부여<br>
-                                6. 선장작 이외에 에이전시가 포트폴리오 페이지에 등록한 작품당 3점 부여<br>
-                            </p>
-                            <div class="down-file">
-                                <ul>
-                                    <li>
-                                        <a href="#lnk" download=""><img src="/img/Icon awesome-file-alt.webp" alt="파일 다운로드">cjaqnvkdlf.pdf</a>
-                                    </li>
-                                    <li>
-                                        <a href="#lnk" download=""><img src="/img/Icon awesome-file-alt.webp" alt="파일 다운로드">cjaqnvkdlf.pdf</a>
-                                    </li>
-                                    <li>
-                                        <a href="#lnk" download=""><img src="/img/Icon awesome-file-alt.webp" alt="파일 다운로드">cjaqnvkdlf.pdf</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="reply">
-                            <ul class="reply-cont">
-                                <li><span class="dot">더픽트</span>이유리 팀장</li>
-                                <li>안녕하세요. 더픽트에서 답변드립니다.<br>
-                                    완전히 불가합니다. 불가불가 안돼안돼.</li>
-                                <li>2022-10-31 20:00</li>
-                                <li>
-                                    <button>수정</button>
-                                    <button>삭제</button>
-                                </li>
-                            </ul>
-                            <ul class="reply-cont">
-                                <li>이유리</li>
-                                <li>왜안되나요 해주세요 해준다고 했잖아요 해줘해줘해줘해줘</li>
-                                <li>2022-10-31 20:00</li>
-                                <li>
-                                    <button>수정</button>
-                                </li>
-                            </ul>
-                            <ul class="reply-cont">
-                                <li><span>더픽트</span>고예림 주임</li>
-                                <li>절대안돼 절대안돼</li>
-                                <li>2022-10-31 20:00</li>
-                                <li>
-                                    <button>수정</button>
-                                    <button>삭제</button>
-                                </li>
-                            </ul>
+                        <div class="regi02 faq-list">
+                            <label for="password" class="cate-tit">PASSWORD</label>
+                            <input type="password" id="password" name="account" class="input-box" autocomplete="off">
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="editor">
-                <p class="editor-tit">댓글쓰기</p>
-                <div class="smart-edit">
-
-                </div>
-                <button class="app-reply">댓글 등록</button>
+                    <p class="acc-tit tit02">담당자 정보</p>
+                    <div class="acc">
+                        <div class="acc-inner01">
+                            <div class="regi02 faq-list">
+                                <label for="acc-name" class="cate-tit">이름</label>
+                                <input type="text" id="acc-name" name="account" class="input-box info01">
+                            </div>
+                            <div class="regi02 faq-list" style="padding: 0 85px;">
+                                <label for="acc-company" class="cate-tit">회사명</label>
+                                <input type="text" id="acc-company" name="account" class="input-box info02">
+                            </div>
+                            <div class="regi02 faq-list">
+                                <label for="acc-group" class="cate-tit">부서/직급</label>
+                                <input type="text" id="acc-group" name="account" class="input-box info02">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="regi02 faq-list no-bd" style="padding-right: 85px;">
+                        <label for="acc-num" class="cate-tit">연락처</label>
+                        <input type="text" id="acc-num" name="account" class="input-box">
+                    </div>
+                    <div class="regi02 faq-list">
+                        <label for="acc-email" class="cate-tit">이메일주소</label>
+                        <input type="text" id="acc-email" name="account" class="input-box" autocomplete="off">
+                    </div>
+                    <div class="regi-btn faq-btns">
+                        <a href="#lnk">취소</a>
+                        <a href="#lnk">등록</a>
+                    </div>
+                </form>
             </div>
         </div>
     </div>

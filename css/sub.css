@@ -10,6 +10,7 @@
 .cont-wrap{
     width: 100%;
     background-color: #f4f7fc;
+    border-left: 1px solid #e5e5e5;
 }
 
 /* 게시글 */
@@ -50,10 +51,17 @@
     font-weight: bold;
 }
 .board{
+    /* position: fixed;
+    max-width: 1609px;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll; */
     padding: 0 32px 0 27px;
 }
 
-
+.pro-btn{
+    transition: all .3s;
+}
 .cont-top > a{
     padding: 5px 25px;
     border: 1px solid rgba(0, 0, 0, 0.1);
@@ -133,14 +141,14 @@
 /* 글목록 */
 .bd-bottom{
     width: 100%;
-    margin-bottom: 20.5px;
+    /* margin-bottom: 20.5px; */
     background-color: #fff;
 }
 .bd-head{
     display: grid;
     grid-template-columns: 10% 60% 10% 10% 10%;
     width: 100%;
-    padding: 10px 0;
+    padding: 13px 0;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     color: #515151;
 }
@@ -160,9 +168,9 @@
     /* height: 100%; */
 }
 .bd-scroll{
-    height: 70vh;
+    height: 74.5vh;
     min-height: 500px;
-    overflow-y: scroll;
+    overflow-y: overlay;
 }
 .bd-scroll::-webkit-scrollbar {
     width: 7px;
@@ -170,9 +178,6 @@
 .bd-scroll::-webkit-scrollbar-thumb {
     background-color: #e5e5e5;
     background-clip: padding-box;
-}
-.bd-scroll::-webkit-scrollbar-track {
-    background-color: #fff;
 }
 .bd-desc{
     display: grid;
@@ -215,6 +220,7 @@
     padding: 5px 25px;
     border: 1px solid rgba(0, 0, 0, 0.1);
     color: #999;
+    transition: all .3s;
 }
 .cont-btn > a:nth-child(-n + 2){
     margin-right: 18px;
@@ -376,6 +382,8 @@
 
 /* 프로젝트 등록하기 */
 .bd-bottom.regist{
+    display: flex;
+    flex-direction: column;
     padding: 40.5px 23.5px 164.5px 23.5px;
     color: #333;
 }
@@ -470,6 +478,7 @@
     padding: 7px 41px;
     border-radius: 3px;
     letter-spacing: -0.96px;
+    transition: all 0.3s;
 }
 .regi-btn > a:first-child{
     margin-right: 18px;
@@ -559,24 +568,6 @@ select:focus{
 }
 .dropdown .dropdown-menu li:active {
     background-color: #e2e2e2
-}
-.status-dot01::before{
-    display: inline-block;
-    content: "";
-    width: 10px;
-    height: 10px;
-    margin-right: 20px;
-    border-radius: 50%;
-    background-color: #00b488;
-}
-.status-dot02::before{
-    display: inline-block;
-    content: "";
-    width: 10px;
-    height: 10px;
-    margin-right: 20px;
-    border-radius: 50%;
-    background-color: #c8c8c8;
 }
 
 /* 데이트피커 */
@@ -713,7 +704,6 @@ select:focus{
     display: grid;
     grid-template-columns: 10% 10% 60% 10% 10%;
     width: 100%;
-    padding: 10px 0;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     color: #515151;
 }
@@ -731,6 +721,18 @@ select:focus{
 }
 .bd-desc.faq-desc > li:nth-child(n + 4) {
     padding-left: 8px;
+}
+.faq-cont{
+    padding: 10px 0 19px 305px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.notice-cont{
+    padding: 10px 0 19px 150px;
+}
+.faq-cont > p, .notice-cont > p{
+    letter-spacing: -0.96px;
+    color: #191919;
+    line-height: 1.5;
 }
 /* faq 보기 */
 .side-btn{
@@ -835,6 +837,7 @@ select:focus{
     font-weight: normal;
     color: #fff;
     cursor: pointer;
+    transition: all .3s;
 }
 
   /* named upload */
@@ -879,13 +882,13 @@ select:focus{
     padding: 0 0;
     line-height: 39px;
     text-align: center;
+    transition: all .3s;
 }
 /* notice */
 .bd-head.notice-head {
     display: grid;
     grid-template-columns: 10% 70% 10% 10%;
     width: 100%;
-    padding: 10px 0;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     color: #515151;
 }
@@ -928,8 +931,53 @@ select:focus{
 .acc-inner01{
     display: flex;
 }
+.input-box.info01{
+    width: 187px;
+}
+.input-box.info02{
+    width: 315px;
+}
+.regi02.faq-list.no-bd{
+    border-bottom: 0;
+}
+/* 알림센터 */
+.msg{
+    display: none;
+}
+.bd-head.faq-head.noti-head{
+    grid-template-columns: 15% 15% 40% 30%;
+}
+.bd-desc.faq-desc.noti-desc{
+    grid-template-columns: 15% 15% 40% 30%;
+}
+.bd-desc.faq-desc.noti-desc > li:first-child{
+    text-align: left;
+    padding-left: 68px;
+}
+.bd-desc.faq-desc.noti-desc > li:nth-child(n + 4) {
+    padding-left: 5px;
+}
 
+/* 사용자 */
+.file-desc.user{
+    margin-left: 177px;
+}
 
+/* faq */
+.bd-head.faq-head.user-head{
+    grid-template-columns: 10% 70% 20%;
+}
+.bd-desc.faq-desc.user-desc{
+    grid-template-columns: 10% 70% 20%;
+    margin: 0 0;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+.faq-cont.user-cont{
+    padding: 16px 0 25px 190px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
 
 
 
@@ -944,6 +992,40 @@ select:focus{
 .bd-desc:hover{
     background-color: #e4ecf9;
 }
+.bd-desc.faq-desc.user-desc:hover{
+    background-color: transparent;
+}
 .delete:hover{
     text-decoration-line: underline;
+}
+.regi02.faq-list.filebox > label:hover{
+    background-color: #0152bd;
+}
+.regi-btn > a:hover{
+    background-color: #a6a6a6;
+    color: #fff;
+}
+.regi-btn.faq-btns > a:hover{
+    background-color: #a6a6a6;
+    color: #fff;
+}
+.msg-show:hover .noti-date{
+    display: none;
+}
+.msg-show:hover .msg{
+    display: block;
+}
+.msg-show:hover .unsend{
+    display: none;
+}
+.msg:hover{
+    text-decoration-line: underline;
+}
+.pro-btn:hover{
+    background-color: #e2e2e2;
+    color: #515151;
+}
+.cont-btn > a:hover{
+    background-color: #e2e2e2;
+    color: #515151;
 }

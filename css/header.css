@@ -94,6 +94,12 @@ nav>ul>li>a{
     letter-spacing: -0.96px;
     transition: all 0.3s;
 }
+/* 사용자 */
+nav.user-nav{
+    width: 40%;
+}
+
+
 .sub li a:hover{
     color: #0152bd;
 }
