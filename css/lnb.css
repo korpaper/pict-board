@@ -98,8 +98,8 @@
 .dep2 > li > a{
     display: block;
     white-space: nowrap;
-    /* text-overflow: ellipsis; */
-    /* overflow: hidden; */
+    text-overflow: ellipsis;
+    overflow: hidden;
     
 }
 

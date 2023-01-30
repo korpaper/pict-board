@@ -1009,6 +1009,10 @@ select:focus{
     background-color: #a6a6a6;
     color: #fff;
 }
+.msg-show{
+    width: 29%;
+    /* background-color: red; */
+}
 .msg-show:hover .noti-date{
     display: none;
 }

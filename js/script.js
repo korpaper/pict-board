@@ -1,29 +1,17 @@
-// 헤더 네비 액티브
-// document.querySelectorAll(".nav").forEach((link) => {
-//     if (link.href === window.location.href) {
-//         link.classList.add("active");
-//         link.setAttribute("aria-current", "page");
-//     }
-// });
+var pageUrl = window.location.href; 
+$(window).on('load', function(){ 
+    $('.nav').siblings('a').removeClass('active');
 
-var pageUrl = window.location.href; //창의 url을 가져온다.
-$(window).on('load', function(){ //load가 되었을때 실행
-    $('.nav').siblings('a').removeClass('active'); //다른 active가 있으면 지워준다.
-
-    if (pageUrl.indexOf('pro') > -1) { //url에 about이라는 글자가 있으면 실행
+    if (pageUrl.indexOf('pro') > -1) {
         $('.nav').eq(0).addClass('active');
-    } else if (pageUrl.indexOf('faq') > -1) { //url에 contact라는 글자가 있으면 실행
+    } else if (pageUrl.indexOf('faq') > -1) {
         $('.nav').eq(1).addClass('active');
-    } else if (pageUrl.indexOf('notice') > -1) { //url에 contact라는 글자가 있으면 실행
+    } else if (pageUrl.indexOf('notice') > -1) {
         $('.nav').eq(2).addClass('active');
-    } else if (pageUrl.indexOf('account') > -1) { //url에 contact라는 글자가 있으면 실행
+    } else if (pageUrl.indexOf('account') > -1) {
         $('.nav').eq(3).addClass('active');
-    // } else if (pageUrl.indexOf('cont') > -1) { //url에 contact라는 글자가 있으면 실행
-    //     $('.nav').eq(4).addClass('active');
-    // } else if (pageUrl.indexOf('icc') > -1) { //url에 contact라는 글자가 있으면 실행
-    //     $('.nav').eq(5).addClass('active');
-    // } else if (pageUrl.indexOf('rcc') > -1) { //url에 contact라는 글자가 있으면 실행
-    //     $('.nav').eq(6).addClass('active');
+    } else if (pageUrl.indexOf('noti') > -1) {
+        $('.nav').eq(4).addClass('active');
     }
 });
 
@@ -95,24 +83,21 @@ $('.dropdown .dropdown-menu li').click(function () {
 $(document).ready(function(){
     var fileTarget = $('.filebox .upload-hidden');
 
-    fileTarget.on('change', function(){  // 값이 변경되면
-      if(window.FileReader){  // modern browser
-        var filename = $(this)[0].files[0].name;
-      } 
-      else {  // old IE
-        var filename = $(this).val().split('/').pop().split('\\').pop();  // 파일명만 추출
-      }
-      
-      // 추출한 파일명 삽입
-      $(this).siblings('.upload-name').val(filename);
+    fileTarget.on('change', function(){
+        if(window.FileReader){
+            var filename = $(this)[0].files[0].name;
+            } else { 
+                var filename = $(this).val().split('/').pop().split('\\').pop();
+            }
+        $(this).siblings('.upload-name').val(filename);
     });
-  }); 
+}); 
 
 
 // 메세지 전송 얼럿창
-  $('.msg').click(function(){
-    confirm("도메인 만료 예정 메세지를 보내시겠습니까?")
-  });
+$('.msg').click(function(){
+    confirm("도메인 만료 예정 메세지를 보내시겠습니까?");
+});
 
 // faq 아코디언
 $(".faq-cont").hide();
