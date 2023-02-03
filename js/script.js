@@ -12,7 +12,7 @@ $(window).on('load', function(){
         $('.nav').eq(3).addClass('active');
     } else if (pageUrl.indexOf('noti') > -1) {
         $('.nav').eq(4).addClass('active');
-    }
+    };
 });
 
 // 헤더 네비
@@ -35,24 +35,24 @@ $("body").on('click', '.dep1-wrap', function(){
     $(this).children('.arrow').toggleClass('active');
     if(!$(this).hasClass('active')){
         $(this).addClass('active').siblings().removeClass('active');
-    }
+    };
 });
 $("body").on('click', '.dep1-wrap', function(){
     if(!$(this).children(".arrow").hasClass('active')){
         $(".arrow").siblings().toggleClass('active');
-    }
+    };
 });
 $("body").on('click', '.dep2 > li', function(){
     if(!$(this).hasClass('active')){
         $(this).addClass('active').siblings().removeClass('active');
-    }
+    };
 });
 
 // 관리자 셀렉트박스
 function chn_sltColor(){
     var color = $("#status option:checked").css("color");
     $("#status").css("color",color);
-}
+};
 
 // 데이트피커
 $(function(){
@@ -62,7 +62,7 @@ $(function(){
         buttonImage:"/img/Icon awesome-calendar-alt.webp",
         buttonImageOnly:false
     });
-})
+});
 
 // 진행여부 셀렉트 박스
 $('.dropdown').click(function () {
@@ -101,14 +101,14 @@ $('.msg').click(function(){
 
 // faq 아코디언
 $(".faq-cont").hide();
-    $(".bd-desc.faq-desc").click(function() {
-        $(this).next(".faq-cont").stop().slideToggle(300);
-        $(this).next(".faq-cont").siblings(".faq-cont").slideUp(300); // 1개씩 펼치기
-    });
+$(".bd-desc.faq-desc").click(function() {
+    $(this).next(".faq-cont").stop().slideToggle(300);
+    $(this).next(".faq-cont").siblings(".faq-cont").slideUp(300); // 1개씩 펼치기
+});
 
 // notice 아코디언
 $(".notice-cont").hide();
-    $(".bd-desc.notice-desc").click(function() {
-        $(this).next(".notice-cont").stop().slideToggle(300);
-        $(this).next(".notice-cont").siblings(".notice-cont").slideUp(300); // 1개씩 펼치기
+$(".bd-desc.notice-desc").click(function() {
+    $(this).next(".notice-cont").stop().slideToggle(300);
+    $(this).next(".notice-cont").siblings(".notice-cont").slideUp(300); // 1개씩 펼치기
 });

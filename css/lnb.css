@@ -22,6 +22,7 @@
     font-family: var(--fn-sans);
 }
 .lnb-list{
+    /* height: calc(100vh - 139px); */
     height: 85.7vh;
     /* position: fixed;
     width: 311px;

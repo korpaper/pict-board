@@ -551,7 +551,6 @@ select:focus{
     width: 100%;
     overflow: hidden;
     background-color: #fff;
-
     border: 1px solid rgba(0, 0, 0, 0.1);
 }
 .dropdown .dropdown-menu li {
