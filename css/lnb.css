@@ -14,7 +14,6 @@
 .search > input{
     border: 0;
     width: 80%;
-    /* height: 30px; */
     font-size: 18px;
     font-weight: bold;
     color: #515151;
@@ -22,11 +21,7 @@
     font-family: var(--fn-sans);
 }
 .lnb-list{
-    /* height: calc(100vh - 139px); */
-    height: 85.7vh;
-    /* position: fixed;
-    width: 311px;
-    height: 100%; */
+    height: 84.9vh;
     overflow-y: scroll;
 }
 .lnb-list::-webkit-scrollbar {
@@ -101,7 +96,6 @@
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
-    
 }
 
 .dep2 > li > a:hover{
