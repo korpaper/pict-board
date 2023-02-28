@@ -15,6 +15,8 @@ $(window).on('load', function(){
     };
 });
 
+
+
 // 헤더 네비
 $('body').on('mouseover', 'nav > ul > li', function(){
     $(this).children(".sub").stop().fadeIn(300);
@@ -101,14 +103,14 @@ $('.msg').click(function(){
 
 // faq 아코디언
 $(".faq-cont").hide();
-$(".bd-desc.faq-desc").click(function() {
-    $(this).next(".faq-cont").stop().slideToggle(300);
-    $(this).next(".faq-cont").siblings(".faq-cont").slideUp(300); // 1개씩 펼치기
+$(".bd-desc.faq-desc > li:nth-child(3)").click(function() {
+    $(".faq-cont").stop().slideToggle(300);
+    $(".faq-cont").siblings(".faq-cont").slideUp(300); // 1개씩 펼치기
 });
 
 // notice 아코디언
 $(".notice-cont").hide();
-$(".bd-desc.notice-desc").click(function() {
-    $(this).next(".notice-cont").stop().slideToggle(300);
-    $(this).next(".notice-cont").siblings(".notice-cont").slideUp(300); // 1개씩 펼치기
+$(".bd-desc > li:nth-child(2)").click(function() {
+    $(".notice-cont").stop().slideToggle(300);
+    $(".notice-cont").siblings(".notice-cont").slideUp(300); // 1개씩 펼치기
 });
