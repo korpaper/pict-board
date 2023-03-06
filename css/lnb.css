@@ -97,10 +97,10 @@
     white-space: nowrap;
     /* text-overflow: ellipsis; */
     overflow: hidden;
-    animation: marquee 5s linear infinite;
 
 }
-.dep2 > li > a.animate{
+.animation{
+    animation: marquee 5s linear infinite;
 }
 @keyframes marquee {
     0% {
@@ -118,9 +118,9 @@
         transform: translateX(-100%);
     }
 }
-.dep2 > li > a:hover{
+/* .dep2 > li > a:hover{
     animation-play-state:paused;
-}
+} */
 
 .dep2 > li.active{
     font-weight: bold;

@@ -9,7 +9,6 @@ fetch("../include/header-manager.html")
 var pageUrl = window.location.href; 
 $(window).on('load', function(){ 
     $('.nav').siblings('a').removeClass('active');
-
     if (pageUrl.indexOf('pro') > -1) {
         $('.nav').eq(0).addClass('active');
     } else if (pageUrl.indexOf('faq') > -1) {
@@ -22,8 +21,6 @@ $(window).on('load', function(){
         $('.nav').eq(4).addClass('active');
     };
 });
-
-
 
 // 헤더 네비
 $('body').on('mouseover', 'nav > ul > li', function(){
@@ -116,3 +113,16 @@ $(".bd-desc > li:nth-child(2)").click(function() {
     $(".notice-cont").stop().slideToggle(300);
     $(".notice-cont").siblings(".notice-cont").slideUp(300); // 1개씩 펼치기
 });
+
+const lnb = document.querySelectorAll('.dep2 > li > a');
+
+function handleNavAni(){
+    const activeClass = 'animation';
+    console.log('아')
+    if(lnb.length >= 2){
+        lnb.className = activeClass;
+    }
+}
+lnb.forEach((element) => {
+    element.addEventListener("mouseover", handleNavAni)
+})
