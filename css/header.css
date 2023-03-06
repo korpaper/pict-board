@@ -19,7 +19,6 @@ aside{
     transition: all 0.3s;
 }
 .logout{
-    display: none;
     position: absolute;
     top: 48px;
     left: 0;
@@ -30,7 +29,8 @@ aside{
     color: #363636;
     border: solid 1px #e5e5e5;
     background-color: #fff;
-    transition: all .3s;
+    transition: all .5s;
+    opacity: 0;
 }
 .profile-name{
     padding-left: 10.7px;
@@ -111,6 +111,9 @@ aside:hover .profile-name{
 }
 .logout:hover{
     color: #0152bd;
+}
+.profile-name:hover .logout{
+    opacity: 1;
 }
 
 @media all and (max-width : 1200px){

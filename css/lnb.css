@@ -97,7 +97,6 @@
     white-space: nowrap;
     /* text-overflow: ellipsis; */
     overflow: hidden;
-
     animation: marquee 5s linear infinite;
 
 }

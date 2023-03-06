@@ -1,3 +1,11 @@
+fetch("../include/header-manager.html")
+    .then(response => {
+        return response.text();
+    })
+    .then(data => {
+        document.querySelector("header").innerHTML = data;
+    });
+
 var pageUrl = window.location.href; 
 $(window).on('load', function(){ 
     $('.nav').siblings('a').removeClass('active');
@@ -23,12 +31,6 @@ $('body').on('mouseover', 'nav > ul > li', function(){
 });
 $('body').on('mouseleave', 'nav > ul > li', function(){
     $(this).children(".sub").stop().fadeOut(300);
-});
-$('body').on('mouseover', 'aside', function(){
-    $(".logout").stop().fadeIn(300);
-});
-$('body').on('mouseleave', 'aside', function(){
-    $(".logout").stop().fadeOut(300);
 });
 
 // lnb 아코디언, 액티브
