@@ -31,23 +31,47 @@ $('body').on('mouseleave', 'nav > ul > li', function(){
 });
 
 // lnb 아코디언, 액티브
-$("body").on('click', '.dep1-wrap', function(){
-    $(this).next(".dep2-wrap").stop().slideToggle(300);
-    $(this).children('.arrow').toggleClass('active');
-    if(!$(this).hasClass('active')){
-        $(this).addClass('active').siblings().removeClass('active');
-    };
-});
-$("body").on('click', '.dep1-wrap', function(){
-    if(!$(this).children(".arrow").hasClass('active')){
-        $(".arrow").siblings().toggleClass('active');
-    };
-});
-$("body").on('click', '.dep2 > li', function(){
-    if(!$(this).hasClass('active')){
-        $(this).addClass('active').siblings().removeClass('active');
-    };
-});
+// $("body").on('click', '.dep1-wrap', function(){
+//     $(this).next(".dep2-wrap").stop().slideToggle(300);
+//     $(this).children('.arrow').toggleClass('active');
+//     if(!$(this).hasClass('active')){
+//         $(this).addClass('active').siblings().removeClass('active');
+//     };
+// });
+// $("body").on('click', '.dep1-wrap', function(){
+//     if(!$(this).children(".arrow").hasClass('active')){
+//         $(".arrow").siblings().toggleClass('active');
+//     };
+// });
+// $("body").on('click', '.dep2 > li', function(){
+//     if(!$(this).hasClass('active')){
+//         $(this).addClass('active').siblings().removeClass('active');
+//     };
+// });
+var acodian = {
+
+    click: function(target) {
+        var _self = this,
+            $target = $(target);
+        $target.on('click', function() {
+            var $this = $(this);
+            if ($this.next('.dep2-wrap').css('display') == 'none') {
+            $('.dep2-wrap').slideUp();
+            _self.onremove($target);
+    
+            $this.addClass('on');
+            $this.next().slideDown();
+            } else {
+            $('.dep2-wrap').slideUp();
+            _self.onremove($target);
+            }
+        });
+    },
+    onremove: function($target) {
+        $target.removeClass('on');
+    }
+};
+acodian.click('.dep1-wrap');
 
 // 관리자 셀렉트박스
 function chn_sltColor(){
@@ -113,16 +137,3 @@ $(".bd-desc > li:nth-child(2)").click(function() {
     $(".notice-cont").stop().slideToggle(300);
     $(".notice-cont").siblings(".notice-cont").slideUp(300); // 1개씩 펼치기
 });
-
-const lnb = document.querySelectorAll('.dep2 > li > a');
-
-function handleNavAni(){
-    const activeClass = 'animation';
-    console.log('아')
-    if(lnb.length >= 2){
-        lnb.className = activeClass;
-    }
-}
-lnb.forEach((element) => {
-    element.addEventListener("mouseover", handleNavAni)
-})
